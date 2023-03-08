@@ -348,5 +348,141 @@ Navbar
   }
   .contact-link {
     margin-left: auto;
+    margin-right: 0;
   }
 }
+
+/*
+=============== 
+Page
+===============
+*/
+.page {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - (6rem + 4rem));
+}
+
+/*
+=============== 
+Footer
+===============
+*/
+.page-footer {
+  height: 4rem;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-footer p {
+  margin-bottom: 0;
+}
+.footer-logo, .page-footer a {
+  color: var(--primary-500);
+}
+
+/*
+=============== 
+Hero
+===============
+*/
+.hero {
+  height: 40vh;
+  background: url('../assets/main.jpeg') center/cover no-repeat;
+  margin-bottom: 2rem;
+  border-radius: var(--borderRadius);
+  position: relative;
+}
+.hero-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: var(--borderRadius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-text {
+  text-align: center;
+  color: var(--white);
+}
+@media screen and (min-width: 768px) {
+  .hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+}
+
+/*
+=============== 
+Recipes
+===============
+*/
+.recipes-container {
+  display: grid;
+  gap: 2rem 1rem;
+  border: 2px solid red;
+}
+.tags-container {
+  border: 2px solid blue;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+.recipes-list {
+  display: grid;
+  gap: 2rem 1rem;
+  padding: 3rem;
+  border: 2px solid green;
+}
+.tags-container h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.tags-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.tags-list a {
+  text-transform: capitalize;
+  display: block;
+  color: var(--grey-500);
+  transition: var(--transition);
+}
+.tags-list a:hover {
+  color: var(--primary-500);
+}
+.recipe {
+  display: block;
+}
+.recipe-img {
+  height: 15rem;
+  border-radius: var(--borderRadius);
+  margin-bottom: 1rem;
+}
+.recipe h5 {
+  margin-bottom: 0;
+  line-height: 1;
+  color: var(--green-dark);
+}
+.recipe p {
+  margin-bottom: 0;
+  line-height: 1;
+  margin-top: 0.5rem;
+  color: var(--grey-500);
+  letter-spacing: var(--letterSpacing);
+}
+
+/*
+=============== 
+
+===============
+*/
