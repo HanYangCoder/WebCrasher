@@ -1,6 +1,7 @@
 .container {
 	max-width: 520px;
 	display: flex;
+	flex-direction: column;
 	margin: 250px auto;
 	justify-content: space-between;
     background: #e0e0e0;
@@ -8,13 +9,43 @@
     border-radius: 10px;
 }
 
+.container section {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.app_title {
+	text-align: center;
+}
+.app_title h1 {
+	margin: 0 auto 10px;
+}
+.app_title {
+	margin-bottom: 30px;
+}
+
+.container section p {
+	margin: 0 20px 0 0;
+}
+
+.container section input[type=number] {
+	width: 50px;
+}
+
 .password_field {
 	background: #fff;
 	width: 100%;
-	margin-right: 20px;
 	padding: 10px 5px 10px;
 	border-radius: 6px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+	margin-bottom: 20px;
+}
+
+.generate_password_btn {
+	margin: 0 auto 20px;
 }

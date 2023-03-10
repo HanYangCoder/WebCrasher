@@ -6,9 +6,18 @@
 
     <body>
         <div class="container">
-            <div id="password_field" class="password_field">password123</div>
-            <button id="generate_password_btn" class="generate_password_btn">Generate Password</button>
-            <input type="number" name="password_length_field" id="password_length_field" min="8" max="25" value="8">
+            <section class="app_title">
+                <h1>Welcome to my password generating app!</h1>
+                <p>Set your desired password length and generate a new random password!</p>
+            </section>
+            <section>
+                <div id="password_field" class="password_field">Create a new strong password</div>
+                <button id="generate_password_btn" class="generate_password_btn">Generate Password</button>
+            </section>
+            <section>
+                <p>Set your password length: </p>
+                <input type="number" name="password_length_field" id="password_length_field" min="8" max="25" value="8">
+            </section>
         </div>
 
         <script src="script.js" defer></script>

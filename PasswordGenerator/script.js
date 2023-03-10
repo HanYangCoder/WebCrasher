@@ -15,7 +15,12 @@ function generateNewPassword(length) {
 
     let password = "";
 
-    for(let i=0; i<length; i++){
+    password += lowercaseChars.charAt(Math.floor(Math.random() * lowercaseChars.length));
+    password += uppercaseChars.charAt(Math.floor(Math.random() * uppercaseChars.length));
+    password += numberChars.charAt(Math.floor(Math.random() * numberChars.length));
+    password += specialChars.charAt(Math.floor(Math.random() * specialChars.length));
+
+    for(let i=0; i<(length-4); i++){
         const random = Math.random();
 
         if(random < 0.4) {
@@ -28,6 +33,23 @@ function generateNewPassword(length) {
             password += specialChars.charAt(Math.floor(Math.random() * specialChars.length));
         }
     }
+
+    function shufflePassword(str) {
+        // Split the string into an array of characters
+        var charArray = str.split('');
+      
+        // Shuffle the array
+        charArray.sort(function() {
+          return 0.5 - Math.random();
+        });
+      
+        // Join the array back into a string
+        var shuffledString = charArray.join('');
+      
+        return shuffledString;
+    }
+
+    password = shufflePassword(password);
 
     passwordField.innerHTML = password;
     console.log(`The new password is: ${password}`);
