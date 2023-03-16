@@ -22,7 +22,7 @@
                     <h2>86 - Eighty Six</h2>
                     <p>Written by Asato Asato</p>
                     <p>Animated by A1 Pictures</p>
-                    <button class="read-more">Read More</button>
+                    <button id="read-more-1" class="read-more" onclick="getAnimeSynopsis(41457)">Read More</button>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@
                     <h2>Fate Stay/Night: Unlimited Bladeworks</h2>
                     <p>By Typemoon</p>
                     <p>Animated by Ufotable</p>
-                    <button class="read-more">Read More</button>
+                    <button id="read-more-2" class="read-more" onclick="getAnimeSynopsis(22297)">Read More</button>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
                     <h2>Re: Zero</h2>
                     <p>Written by Teppei Nagatsuki</p>
                     <p>Animated by White Fox</p>
-                    <button class="read-more">Read More</button>
+                    <button id="read-more-3" class="read-more" onclick="getAnimeSynopsis(31240)">Read More</button>
                 </div>
             </div>
         </div>
@@ -61,9 +61,11 @@
             <div class="modal_close-bar">
                 <span>X</span>
             </div>
-            <p>Modal content here</p>
-            <p>More modal content here</p>
-            <p>Some more modal content here and there</p>
+            <h3 id="modal-card-title">Anime Title Here</h3>
+            <br>
+            <p id="modal-card-content">Anime Synopsis Here</p>
+            <br>
+            <p class="data-source">Source: <a href="https://jikan.moe/">Jikan API</a></p>
         </div>
     </div>
 

@@ -79,6 +79,8 @@ h1 {
     background-color: #fff;
     padding: 2rem 4rem;
     border-radius: 10px;
+    margin: 20px;
+    max-width: 768px;
 }
 .modal .modal_close-bar {
 	display: flex;

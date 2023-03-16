@@ -21,19 +21,48 @@ const toggleModal = () => {
     .classList.toggle('modal-hidden');
 };
 
-const showModal = () => {
+const showModal = (title, synopsis) => {
     document.querySelector('.modal')
     .classList.toggle('modal-hidden');
 
-    var myAnime = JSON.parse(data);
-    console.log(myAnime[0].title);
+    // var myAnime = JSON.parse(data);
+    // console.log(myAnime[0].title);
+    console.log(`Title: ${title}`);
+    console.log(`Title: ${synopsis}`);
+    document.getElementById("modal-card-title").innerHTML = title;
+    document.getElementById("modal-card-content").innerHTML = synopsis;
 };
 
 // selects and iterates all read more buttons
 // waits for a "click" event and executes toggleModal
-document.querySelectorAll('.read-more').forEach(
-    (element) => {element.addEventListener('click', showModal)}
-);
+// document.querySelectorAll('.read-more').forEach(
+//     (element) => {element.addEventListener('click', showModal)}
+// );
 
 document.querySelector('.modal_close-bar span')
 .addEventListener('click', toggleModal);
+
+
+/*
+Anime list and MAL codes:
+86 - 41457
+Fate: UBW - 22297
+Re:Zero - 31240
+*/
+
+function getAnimeSynopsis(animeCode){
+    const URL = `https://api.jikan.moe/v4/anime/${animeCode}`;
+    let animeTitle = "";
+    let animeSynopsis = "";
+
+    fetch(URL)
+        .then(response => response.json())
+        .then(json => {
+            animeTitle = json.data.titles[0].title;
+            animeSynopsis = json.data.synopsis;
+            showModal(animeTitle, animeSynopsis);
+
+            // console.log(`Anime title: ${animeTitle} \nAnime Summary: ${animeSynopsis}`)
+        })
+        .catch (error => console.error(error));
+}
